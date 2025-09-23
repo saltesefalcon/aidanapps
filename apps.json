@@ -1,0 +1,79 @@
+{
+  "universal": [
+     {
+      "name": "Heist Wine Tracker",
+      "description": "Wine inventory & adjustments",
+      "url": "https://your-domain.github.io/heisttrackermaster",
+      "requiresLogin": true,
+      "category": "inventory",
+      "icon": "inventory"
+    },
+    {
+      "name": "Keg Calculator",
+      "description": "Calculate keg beer weights for inventory",
+      "url": "https://your-domain.github.io/kegcalculator",
+      "requiresLogin": false,
+      "category": "general",
+      "icon": "general"
+    }
+      {
+        "name": "Food Transfer Tracker",
+        "description": "Transfers, invoices, exports",
+        "url": "https://your-domain.github.io/tracker12",
+        "requiresLogin": true,
+        "category": "inventory",
+        "icon": "inventory"
+      }
+  ],
+  "locations": {
+    "Beacon": [
+      {
+        "name": "Budget Tracker - Admin",
+        "description": "Weekly KPIs & deliveries",
+        "url": "https://your-domain.github.io/budgettracker17",
+        "requiresLogin": true,
+        "category": "analytics",
+        "icon": "analytics",
+        "tags": ["kpi","deliveries"]
+      },
+      {
+        "name": "Budget Tracker - Chef View",
+        "description": "Daily targets / delivery details",
+        "url": "https://your-domain.github.io/cheftracker4",
+        "requiresLogin": false,
+        "category": "kitchen",
+        "icon": "kitchen"
+      }
+    ],
+    "Prohibition": [
+      {
+        "name": "Food Transfer Tracker",
+        "description": "Transfers, invoices, exports",
+        "url": "https://your-domain.github.io/tracker12",
+        "requiresLogin": true,
+        "category": "inventory",
+        "icon": "inventory"
+      }
+    ],
+    "Tulia Osteria": [
+      {
+        "name": "Food Transfer Tracker",
+        "description": "Transfers, invoices, exports",
+        "url": "https://your-domain.github.io/tracker12",
+        "requiresLogin": true,
+        "category": "inventory",
+        "icon": "inventory"
+      }
+    ],
+    "Ce Soir": [
+      {
+        "name": "Food Transfer Tracker",
+        "description": "Transfers, invoices, exports",
+        "url": "https://your-domain.github.io/tracker12",
+        "requiresLogin": true,
+        "category": "inventory",
+        "icon": "inventory"
+      }
+    ]
+  }
+}
