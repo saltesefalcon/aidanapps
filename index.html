@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Company Apps</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Landing page for company applications." />
+  <meta property="og:title" content="Company Apps" />
+  <meta property="og:description" content="Landing page for company applications." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.ico" />
+
+  <style>
+    :root {
+      /* ===== Brand tokens (tweak these) ===== */
+      --brand-bg: #0f1115;        /* page background */
+      --brand-card: #161a22;      /* card / section background */
+      --brand-accent: #ffd166;    /* accent for focus/hover */
+      --brand-primary: #6ab0ff;   /* button text/icon */
+      --brand-text: #e8eef6;      /* main text */
+      --brand-muted: #9aa8b6;     /* secondary text */
+      --brand-ring: rgba(255, 209, 102, 0.45);
+
+      --radius-lg: 16px;
+      --radius-md: 12px;
+      --radius-sm: 8px;
+
+      --shadow-1: 0 6px 18px rgba(0,0,0,0.25);
+      --shadow-2: 0 10px 28px rgba(0,0,0,0.35);
+
+      --grid-gap: 14px;
+      --max-width: 1100px;
+    }
+
+    /* Light mode (auto) if you want: comment out to force dark only */
+    @media (prefers-color-scheme: light) {
+      :root {
+        --brand-bg: #f7f9fc;
+        --brand-card: #ffffff;
+        --brand-accent: #7b5cff;
+        --brand-primary: #2b4cff;
+        --brand-text: #0f1222;
+        --brand-muted: #5a6270;
+        --brand-ring: rgba(43, 76, 255, 0.25);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color: var(--brand-text);
+      background: radial-gradient(60rem 60rem at 80% -20%, rgba(255,255,255,0.06), transparent 60%),
+                  radial-gradient(50rem 50rem at -20% 20%, rgba(255,255,255,0.05), transparent 60%),
+                  var(--brand-bg);
+    }
+
+    .wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 24px clamp(16px, 3vw, 28px);
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 16px;
+      align-items: center;
+      padding: 18px;
+      background: var(--brand-card);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-1);
+      position: sticky;
+      top: 16px;
+      z-index: 10;
+      backdrop-filter: blur(6px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, var(--brand-primary), var(--brand-accent));
+      box-shadow: inset 0 0 0 2px rgba(255,255,255,0.25), var(--shadow-1);
+      flex: none;
+    }
+
+    .brand h1 {
+      font-size: 1.1rem;
+      line-height: 1.1;
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      background: color-mix(in srgb, var(--brand-card), black 4%);
+      border: 1px solid color-mix(in srgb, var(--brand-muted), transparent 60%);
+      border-radius: 999px;
+      padding: 8px 12px;
+      gap: 10px;
+    }
+    .search input {
+      background: transparent;
+      border: 0;
+      outline: none;
+      color: var(--brand-text);
+      width: 100%;
+      font-size: 0.95rem;
+    }
+
+    .help {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .pill {
+      font-size: 0.85rem;
+      color: var(--brand-muted);
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px dashed color-mix(in srgb, var(--brand-muted), transparent 50%);
+    }
+
+    main {
+      display: grid;
+      gap: 22px;
+      margin-top: 22px;
+    }
+
+    .section {
+      background: var(--brand-card);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-1);
+      overflow: clip;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 18px 8px 18px;
+      position: sticky;
+      top: 76px; /* sits just below header on scroll */
+      background: var(--brand-card);
+      z-index: 5;
+    }
+    .section-title {
+      margin: 0;
+      font-size: 1.05rem;
+      letter-spacing: 0.2px;
+    }
+    .section-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .chips {
+      padding: 0 16px 14px 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .chip {
+      background: color-mix(in srgb, var(--brand-card), white 4%);
+      border: 1px solid color-mix(in srgb, var(--brand-muted), transparent 50%);
+      color: var(--brand-muted);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      cursor: pointer;
+      user-select: none;
+    }
+    .chip[aria-pressed="true"] {
+      color: var(--brand-text);
+      border-color: var(--brand-accent);
+      box-shadow: 0 0 0 4px var(--brand-ring);
+    }
+
+    .grid {
+      padding: 0 16px 18px 16px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--grid-gap);
+    }
+    @media (min-width: 700px) {
+      .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    @media (min-width: 980px) {
+      .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    }
+
+    .app {
+      position: relative;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 10px;
+      align-items: center;
+      padding: 14px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(180deg,
+        color-mix(in srgb, var(--brand-card), white 4%),
+        color-mix(in srgb, var(--brand-card), black 4%)
+      );
+      border: 1px solid color-mix(in srgb, var(--brand-muted), transparent 55%);
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--shadow-1);
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+      outline: none;
+    }
+    .app:hover, .app:focus-visible {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-2);
+      border-color: var(--brand-accent);
+    }
+    .app:focus-visible {
+      box-shadow: var(--shadow-2), 0 0 0 6px var(--brand-ring);
+    }
+
+    .app .icon {
+      width: 42px; height: 42px;
+      border-radius: 12px;
+      display: grid; place-items: center;
+      background: linear-gradient(145deg, color-mix(in srgb, var(--brand-primary), white 12%), color-mix(in srgb, var(--brand-primary), black 12%));
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.25);
+      font-size: 22px;
+      color: white;
+    }
+    .app .meta {
+      min-width: 0;
+      display: grid;
+      gap: 4px;
+    }
+    .app .name {
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .app .desc {
+      font-size: 0.86rem;
+      color: var(--brand-muted);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .badge {
+      position: absolute;
+      right: 10px; top: 10px;
+      font-size: 0.72rem;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid color-mix(in srgb, var(--brand-muted), transparent 50%);
+      color: var(--brand-muted);
+      background: color-mix(in srgb, var(--brand-card), white 4%);
+    }
+    .lock {
+      margin-left: 6px;
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+
+    footer {
+      color: var(--brand-muted);
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 32px 0 18px;
+    }
+
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header role="banner" aria-label="Header">
+      <div class="brand" title="Company Apps">
+        <div class="brand-logo" aria-hidden="true"></div>
+        <h1>Company Apps</h1>
+      </div>
+
+      <label class="search" aria-label="Search apps">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M21 21l-4.2-4.2M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z"
+                stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <input id="searchInput" type="search" placeholder="Search apps or locations…" autocomplete="off" />
+      </label>
+
+      <div class="help">
+        <div class="pill">Tip: press “/” to focus search</div>
+      </div>
+    </header>
+
+    <main id="content" role="main" tabindex="-1">
+      <!-- Sections are rendered by JS from apps.json -->
+    </main>
+
+    <footer>
+      © <span id="year"></span> Your Company. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    // ----- Config -----
+    const CONFIG_URL = 'apps.json'; // put your real config here if you rename
+
+    // Basic icon mapping by category (emoji keeps the page ultra-fast + offline)
+    const ICONS = {
+      finance: "💳", ops: "🧰", hr: "👥", inventory: "📦",
+      analytics: "📊", kitchen: "🍳", bar: "🍸", general: "🧭"
+    };
+
+    const params = new URLSearchParams(location.search);
+    const deepLinkLocation = params.get('location'); // ?location=Beacon
+    const openInNewTab = true; // flip to false if you prefer same-tab
+
+    // ----- DOM helpers -----
+    const $ = sel => document.querySelector(sel);
+
+    function el(tag, attrs = {}, children = []) {
+      const node = document.createElement(tag);
+      for (const [k,v] of Object.entries(attrs)) {
+        if (k === 'class') node.className = v;
+        else if (k === 'dataset') Object.assign(node.dataset, v);
+        else if (k.startsWith('on') && typeof v === 'function') node.addEventListener(k.slice(2), v);
+        else if (v !== null && v !== undefined) node.setAttribute(k, v);
+      }
+      for (const child of [].concat(children)) {
+        if (child == null) continue;
+        node.append(typeof child === 'string' ? document.createTextNode(child) : child);
+      }
+      return node;
+    }
+
+    function appCard(app) {
+      const icon = el('div', { class: 'icon', 'aria-hidden': 'true' }, ICONS[app.icon] || '🧩');
+      const name = el('div', { class: 'name' }, app.name);
+      const desc = el('div', { class: 'desc' }, app.description || '');
+      const meta = el('div', { class: 'meta' }, [name, desc]);
+      const a = el('a', {
+        class: 'app',
+        href: app.url,
+        rel: openInNewTab ? 'noopener noreferrer' : undefined,
+        target: openInNewTab ? '_blank' : undefined,
+        'data-search': [app.name, app.description, app.category, (app.tags || []).join(' '), (app.location || '')].join(' ').toLowerCase()
+      }, [icon, meta]);
+
+      const badgeText = app.location ? app.location : app.category || 'App';
+      const badge = el('div', { class: 'badge' }, badgeText);
+      a.append(badge);
+
+      if (app.requiresLogin) {
+        const lock = el('span', { class: 'lock', title: 'Login required', 'aria-label': 'Login required' }, '🔒');
+        name.appendChild(lock);
+      }
+
+      return a;
+    }
+
+    function sectionBlock(titleText, id, apps = [], chips = []) {
+      const title = el('h2', { class: 'section-title', id }, titleText);
+      const head = el('div', { class: 'section-head' }, [title, el('div', { class: 'section-actions' })]);
+
+      const chipRow = el('div', { class: 'chips' });
+      for (const c of chips) {
+        const chip = el('button', { class: 'chip', role: 'button', 'aria-pressed': 'false', 'data-filter': c.value }, c.label);
+        chip.addEventListener('click', () => {
+          const pressed = chip.getAttribute('aria-pressed') === 'true';
+          chip.setAttribute('aria-pressed', String(!pressed));
+          filter();
+        });
+        chipRow.appendChild(chip);
+      }
+
+      const grid = el('div', { class: 'grid' }, apps.map(appCard));
+      const section = el('section', { class: 'section', 'aria-labelledby': id }, [head, chipRow, grid]);
+      return { section, grid, chipRow };
+    }
+
+    function render(data) {
+      const main = $('#content');
+      main.innerHTML = '';
+
+      // Universal
+      const universal = (data.universal || []);
+      const uChips = [
+        { label: 'All', value: 'all' },
+        ...Array.from(new Set(universal.map(a => a.category || 'general')))
+          .sort().map(cat => ({ label: cat, value: `cat:${cat}` }))
+      ];
+      const u = sectionBlock('Universal Apps', 'universal', universal, uChips);
+      main.appendChild(u.section);
+
+      // Locations
+      const locKeys = Object.keys(data.locations || {});
+      for (const key of locKeys) {
+        const apps = (data.locations[key] || []).map(x => ({ ...x, location: key }));
+        const chips = [
+          { label: 'All', value: 'all' },
+          ...Array.from(new Set(apps.map(a => a.category || 'general')))
+            .sort().map(cat => ({ label: cat, value: `cat:${cat}` }))
+        ];
+        const s = sectionBlock(key, `loc-${key}`, apps, chips);
+        main.appendChild(s.section);
+      }
+
+      // Deep-link scroll (e.g., ?location=Beacon)
+      if (deepLinkLocation) {
+        const target = document.getElementById(`loc-${deepLinkLocation}`);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      // Search hookup
+      $('#searchInput').addEventListener('input', filter);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === '/') {
+          e.preventDefault();
+          $('#searchInput').focus();
+        }
+      });
+
+      function activeChipFilters() {
+        const pressed = Array.from(document.querySelectorAll('.chip[aria-pressed="true"]'))
+          .map(c => c.getAttribute('data-filter'));
+        return pressed;
+      }
+
+      function filter() {
+        const q = $('#searchInput').value.trim().toLowerCase();
+        const filters = activeChipFilters();
+        const allCards = Array.from(document.querySelectorAll('.app'));
+
+        allCards.forEach(card => {
+          const text = card.getAttribute('data-search') || '';
+          let passQ = !q || text.includes(q);
+
+          // Category chip filters
+          let passFilter = true;
+          const hasFilters = filters.length > 0 && !filters.includes('all');
+          if (hasFilters) {
+            const catFilter = filters.find(f => f.startsWith('cat:'));
+            if (catFilter) {
+              const cat = catFilter.split(':')[1];
+              passFilter = text.includes(cat.toLowerCase());
+            }
+          }
+
+          const show = passQ && passFilter;
+          card.classList.toggle('hidden', !show);
+        });
+      }
+    }
+
+    async function boot() {
+      try {
+        const res = await fetch(CONFIG_URL, { cache: 'no-cache' });
+        if (!res.ok) throw new Error('Failed to load apps.json');
+        const data = await res.json();
+        render(data);
+      } catch (e) {
+        console.warn('apps.json failed; loading fallback example. Error:', e);
+        const fallback = {
+          universal: [
+            { name: "Invoice Scanner", description: "Upload PDFs/Photos → OC/QBO export", url: "#", requiresLogin: true, category: "ops", icon: "ops", tags: ["invoices","ocr"] },
+            { name: "Heist Wine Tracker", description: "Inventory & adjustments", url: "#", requiresLogin: true, category: "inventory", icon: "inventory" },
+            { name: "Company Wiki", description: "Guides, SOPs, policies", url: "#", requiresLogin: false, category: "general", icon: "general" }
+          ],
+          locations: {
+            "Beacon": [
+              { name: "Beacon Food Budget", description: "Weekly KPIs & deliveries", url: "#", requiresLogin: true, category: "analytics", icon: "analytics" },
+              { name: "Chef View", description: "Daily targets, deliveries", url: "#", requiresLogin: false, category: "kitchen", icon: "kitchen" }
+            ],
+            "Prohibition": [
+              { name: "Transfer Tracker", description: "Inter-store transfers & invoices", url: "#", requiresLogin: true, category: "inventory", icon: "inventory" }
+            ],
+            "Tulia Osteria": [
+              { name: "Prep Sheets", description: "Station lists & par levels", url: "#", requiresLogin: false, category: "kitchen", icon: "kitchen" }
+            ],
+            "Ce Soir": [
+              { name: "POS Reports", description: "End-of-day summaries", url: "#", requiresLogin: true, category: "analytics", icon: "analytics" }
+            ]
+          }
+        };
+        render(fallback);
+      } finally {
+        document.getElementById('year').textContent = new Date().getFullYear();
+      }
+    }
+    boot();
+  </script>
+</body>
+</html>
