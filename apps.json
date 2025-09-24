@@ -57,8 +57,8 @@
         "category": "analytics",
         "icon": "analytics",
         "roles": [
-          { "label": "Admin", "url": "https://your-domain.github.io/prohibitionbudget/" },
-          { "label": "Chef",  "url": "https://your-domain.github.io/prohibitionbudget/chef.html" }
+          { "label": "Admin", "url": "https://saltesefalcon.github.io/prohibitionbudgettracker/" },
+          { "label": "Chef",  "url": "https://saltesefalcon.github.io/prohibitionbudgettracker/chef.html" }
         ]
       },
       {
@@ -86,8 +86,8 @@
         "category": "analytics",
         "icon": "analytics",
         "roles": [
-          { "label": "Admin", "url": "https://your-domain.github.io/tuliabudget/" },
-          { "label": "Chef",  "url": "https://your-domain.github.io/tuliabudget/chef.html" }
+          { "label": "Admin", "url": "https://saltesefalcon.github.io/tuliabudgettracker/" },
+          { "label": "Chef",  "url": "https://saltesefalcon.github.io/tuliabudgettracker/chef.html" }
         ]
       },
       {
@@ -115,8 +115,8 @@
         "category": "analytics",
         "icon": "analytics",
         "roles": [
-          { "label": "Admin", "url": "https://your-domain.github.io/cesoirbudget/" },
-          { "label": "Chef",  "url": "https://your-domain.github.io/cesoirbudget/chef.html" }
+          { "label": "Admin", "url": "https://saltesefalcon.github.io/cesoirbudgettracker/" },
+          { "label": "Chef",  "url": "https://saltesefalcon.github.io/cesoirbudgettracker/chef.html" }
         ]
       },
       {
