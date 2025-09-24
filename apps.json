@@ -1,79 +1,129 @@
 {
   "universal": [
-     {
-      "name": "Heist Wine Tracker",
-      "description": "Wine inventory & adjustments",
-      "url": "https://your-domain.github.io/heisttrackermaster",
-      "requiresLogin": true,
-      "category": "inventory",
-      "icon": "inventory"
-    },
     {
       "name": "Keg Calculator",
-      "description": "Calculate keg beer weights for inventory",
-      "url": "https://your-domain.github.io/kegcalculator",
+      "description": "Quick volumes & yield calculator",
+      "url": "https://saltesefalcon.github.io/kegcalculator/",
       "requiresLogin": false,
-      "category": "general",
-      "icon": "general"
+      "category": "calc",
+      "icon": "keg",
+      "tags": ["keg", "beer", "volume"]
+    },
+    {
+      "name": "Heist Tracker",
+      "description": "Heist wine inventory & adjustments",
+      "url": "https://saltesefalcon.github.io/heisttracker/",
+      "requiresLogin": true,
+      "category": "inventory",
+      "icon": "inventory",
+      "tags": ["wine", "inventory"]
     }
-      {
-        "name": "Food Transfer Tracker",
-        "description": "Transfers, invoices, exports",
-        "url": "https://your-domain.github.io/tracker12",
-        "requiresLogin": true,
-        "category": "inventory",
-        "icon": "inventory"
-      }
   ],
   "locations": {
     "Beacon": [
       {
-        "name": "Budget Tracker - Admin",
+        "name": "Budget Tracker",
         "description": "Weekly KPIs & deliveries",
-        "url": "https://your-domain.github.io/budgettracker17",
+        "url": "https://saltesefalcon.github.io/beaconbudgettracker/",
         "requiresLogin": true,
         "category": "analytics",
-        "icon": "analytics",
-        "tags": ["kpi","deliveries"]
+        "icon": "analytics"
       },
       {
-        "name": "Budget Tracker - Chef View",
-        "description": "Daily targets / delivery details",
-        "url": "https://your-domain.github.io/cheftracker4",
-        "requiresLogin": false,
-        "category": "kitchen",
-        "icon": "kitchen"
+        "name": "Food Transfer Tracker",
+        "description": "Inter-store food transfers & invoices",
+        "url": "https://saltesefalcon.github.io/aidanfoodtracker/",
+        "requiresLogin": true,
+        "category": "transfer",
+        "icon": "transfer"
+      },
+      {
+        "name": "Alcohol Transfer Tracker",
+        "description": "Beer/wine/spirit transfers",
+        "url": "https://your-domain.github.io/alcohol-transfer-beacon",
+        "requiresLogin": true,
+        "category": "bar",
+        "icon": "bar"
       }
     ],
     "Prohibition": [
       {
-        "name": "Food Transfer Tracker",
-        "description": "Transfers, invoices, exports",
-        "url": "https://your-domain.github.io/tracker12",
+        "name": "Budget Tracker",
+        "description": "Weekly KPIs & deliveries",
+        "url": "https://your-domain.github.io/budgettracker-prohibition",
         "requiresLogin": true,
-        "category": "inventory",
-        "icon": "inventory"
+        "category": "analytics",
+        "icon": "analytics"
+      },
+      {
+        "name": "Food Transfer Tracker",
+        "description": "Inter-store food transfers & invoices",
+        "url": "https://saltesefalcon.github.io/aidanfoodtracker/",
+        "requiresLogin": true,
+        "category": "transfer",
+        "icon": "transfer"
+      },
+      {
+        "name": "Alcohol Transfer Tracker",
+        "description": "Beer/wine/spirit transfers",
+        "url": "https://your-domain.github.io/alcohol-transfer-prohibition",
+        "requiresLogin": true,
+        "category": "bar",
+        "icon": "bar"
       }
     ],
     "Tulia Osteria": [
       {
-        "name": "Food Transfer Tracker",
-        "description": "Transfers, invoices, exports",
-        "url": "https://your-domain.github.io/tracker12",
+        "name": "Budget Tracker",
+        "description": "Weekly KPIs & deliveries",
+        "url": "https://your-domain.github.io/budgettracker-tulia",
         "requiresLogin": true,
-        "category": "inventory",
-        "icon": "inventory"
+        "category": "analytics",
+        "icon": "analytics"
+      },
+      {
+        "name": "Food Transfer Tracker",
+        "description": "Inter-store food transfers & invoices",
+        "url": "https://saltesefalcon.github.io/aidanfoodtracker/",
+        "requiresLogin": true,
+        "category": "transfer",
+        "icon": "transfer"
+      },
+      {
+        "name": "Alcohol Transfer Tracker",
+        "description": "Beer/wine/spirit transfers",
+        "url": "https://your-domain.github.io/alcohol-transfer-tulia",
+        "requiresLogin": true,
+        "category": "bar",
+        "icon": "bar"
       }
     ],
     "Ce Soir": [
       {
-        "name": "Food Transfer Tracker",
-        "description": "Transfers, invoices, exports",
-        "url": "https://your-domain.github.io/tracker12",
+        "name": "Budget Tracker",
+        "description": "Weekly KPIs & deliveries",
+        "url": "https://your-domain.github.io/budgettracker-cesoir",
         "requiresLogin": true,
-        "category": "inventory",
-        "icon": "inventory"
+        "category": "analytics",
+        "icon": "analytics"
+      },
+      {
+        "name": "Food Transfer Tracker",
+        "description": "Inter-store food transfers & invoices",
+        "url": "https://saltesefalcon.github.io/aidanfoodtracker/",
+        "requiresLogin": true,
+        "category": "transfer",
+        "icon": "transfer"
+      },
+      {
+        "name": "Alcohol Transfer Tracker",
+        "description": "Beer/wine/spirit transfers",
+        "url": "https://your-domain.github.io/alcohol-transfer-cesoir",
+        "requiresLogin": true,
+        "category": "bar",
+        "icon": "bar"
       }
     ]
   }
 }
+
