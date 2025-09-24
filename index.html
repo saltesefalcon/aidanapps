@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Aidan Apps</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Aidan Apps — company app launchpad" />
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    :root{
+      --bg:#0b0b0c; --surface:#121214; --surface-2:#16161a;
+      --text:#f5f3ee; --muted:#b7b1a3;
+      --gold:#c8a34a; --gold-2:#ffd97a; --ring:rgba(200,163,74,.35);
+      --radius-lg:20px; --radius-md:14px; --radius-sm:10px;
+      --shadow-1:0 10px 30px rgba(0,0,0,.45);
+      --shadow-2:0 18px 44px rgba(0,0,0,.6);
+      --max-w:1100px; --gap:16px;
+    }
+    *{box-sizing:border-box} html,body{height:100%}
+    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--text);
+      background:radial-gradient(90rem 60rem at 120% -10%,rgba(200,163,74,.12),transparent 60%),
+                 radial-gradient(70rem 50rem at -10% 10%,rgba(255,217,122,.08),transparent 60%),var(--bg);}
+    .wrap{max-width:var(--max-w);margin:0 auto;padding:28px clamp(16px,3vw,28px)}
+    .hero{border:1px solid rgba(200,163,74,.25);border-radius:var(--radius-lg);padding:28px;
+      background:linear-gradient(180deg,var(--surface),var(--surface-2));box-shadow:var(--shadow-1);position:relative;overflow:hidden}
+    .brand{display:flex;align-items:center;gap:14px}
+    .mark{width:48px;height:48px;border-radius:50%;
+      background:conic-gradient(from 210deg,var(--gold),var(--gold-2) 40%,var(--gold) 80%);
+      box-shadow:inset 0 0 0 2px rgba(255,255,255,.25),0 10px 30px rgba(200,163,74,.25)}
+    .brand h1{margin:0;font-size:1.4rem;letter-spacing:.5px}
+    .tag{color:var(--muted);margin-top:6px;font-size:.95rem}
+    .toolbar{display:grid;grid-template-columns:1fr auto;gap:16px;margin-top:18px}
+    .search{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.02);
+      border:1px solid rgba(255,255,255,.08);border-radius:999px;padding:10px 14px}
+    .search input{background:transparent;border:0;outline:none;color:var(--text);width:100%;font-size:.98rem}
+    .kbd{display:flex;align-items:center;gap:6px;color:var(--muted);border:1px solid rgba(255,255,255,.08);border-radius:999px;padding:8px 12px}
+    .section{margin-top:22px;border-radius:var(--radius-lg);background:linear-gradient(180deg,var(--surface),var(--surface-2));
+      border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow-1);overflow:clip}
+    .section-head{display:flex;justify-content:space-between;align-items:center;padding:18px 18px 8px 18px;border-bottom:1px solid rgba(255,255,255,.06);
+      background:linear-gradient(180deg,rgba(200,163,74,.04),transparent)}
+    .section h2{margin:0;font-size:1.06rem;letter-spacing:.4px}
+    .chips{display:flex;gap:8px;padding:0 16px 14px 16px;flex-wrap:wrap}
+    .chip{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);color:var(--muted);
+      padding:6px 10px;border-radius:999px;font-size:.82rem;cursor:pointer}
+    .chip[aria-pressed="true"]{color:var(--text);border-color:var(--gold);box-shadow:0 0 0 6px var(--ring)}
+    .grid{padding:16px;display:grid;gap:var(--gap);grid-template-columns:repeat(1,minmax(0,1fr))}
+    @media (min-width:680px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (min-width:980px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    .card{position:relative;display:grid;grid-template-columns:auto 1fr;gap:12px;padding:16px;border-radius:var(--radius-md);
+      background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(0,0,0,.08));border:1px solid rgba(255,255,255,.08);
+      color:inherit;text-decoration:none;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease;outline:none}
+    .card:hover,.card:focus-visible{transform:translateY(-1px);box-shadow:var(--shadow-2);border-color:var(--gold)}
+    .card:focus-visible{box-shadow:var(--shadow-2),0 0 0 8px var(--ring)}
+    .ico{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:22px;color:#1b1203;
+      background:linear-gradient(145deg,var(--gold-2),var(--gold));box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+    .meta{min-width:0;display:grid;gap:4px}.name{font-weight:600;letter-spacing:.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .desc{font-size:.88rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .badge{position:absolute;right:10px;top:10px;font-size:.72rem;padding:4px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.04);color:var(--muted)}
+    .lock{margin-left:6px;font-size:.9em;opacity:.9}
+    footer{color:var(--muted);font-size:.9rem;text-align:center;padding:30px 0 10px}
+    .hidden{display:none!important}
+
+    /* Role chooser modal */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;padding:20px}
+    .modal{width:100%;max-width:460px;background:linear-gradient(180deg,var(--surface),var(--surface-2));
+      border:1px solid rgba(255,255,255,.12);border-radius:18px;box-shadow:var(--shadow-2);padding:20px}
+    .modal h3{margin:0 0 4px 0}
+    .modal p{margin:0 0 14px 0;color:var(--muted)}
+    .modal .btns{display:grid;gap:10px;margin-top:12px}
+    .btn{display:flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;padding:12px 14px;
+      border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.03);color:var(--text);cursor:pointer;text-decoration:none}
+    .btn:hover{border-color:var(--gold)}
+    .modal .cancel{margin-top:8px;text-align:center;color:var(--muted);cursor:pointer}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero" role="banner" aria-label="Aidan Apps">
+      <div class="brand">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <h1>Aidan Apps</h1>
+          <div class="tag">Elegant launchpad for company tools</div>
+        </div>
+      </div>
+      <div class="toolbar">
+        <label class="search" aria-label="Search apps">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M21 21l-4.2-4.2M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z"
+                  stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <input id="searchInput" type="search" placeholder="Search apps or locations…" autocomplete="off"/>
+        </label>
+        <div class="kbd"><span>Tip:</span><strong>/</strong><span>to focus search</span></div>
+      </div>
+    </section>
+
+    <main id="content" role="main"></main>
+    <footer>© <span id="year"></span> Aidan Apps</footer>
+  </div>
+
+  <!-- Role chooser modal -->
+  <div id="chooser" class="modal-backdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="chooserTitle">
+      <h3 id="chooserTitle">Choose your access</h3>
+      <p id="chooserSubtitle">Select a role for this Budget Tracker.</p>
+      <div class="btns" id="chooserButtons"></div>
+      <div class="cancel" id="chooserCancel">Cancel</div>
+    </div>
+  </div>
+
+  <script>
+    const CONFIG_URL = 'apps.json';
+    const OPEN_IN_NEW_TAB = true;
+    const ICONS = { calc:"🧮", keg:"🍺", inventory:"📦", analytics:"📊", transfer:"🔁", bar:"🍸", kitchen:"🍳" };
+    const $ = s => document.querySelector(s);
+
+    // --- Modal helpers ---
+    const chooser = $('#chooser');
+    const chooserBtns = $('#chooserButtons');
+    const chooserCancel = $('#chooserCancel');
+    function openChooser(app){
+      chooserBtns.innerHTML = '';
+      (app.roles || []).forEach(r=>{
+        const a = document.createElement('a');
+        a.className = 'btn';
+        a.textContent = r.label;
+        a.href = r.url;
+        if (OPEN_IN_NEW_TAB){ a.target = '_blank'; a.rel = 'noopener noreferrer'; }
+        chooserBtns.appendChild(a);
+      });
+      $('#chooserTitle').textContent = `Choose your access — ${app.location || ''} ${app.name}`.trim();
+      chooser.style.display = 'flex';
+      chooser.setAttribute('aria-hidden','false');
+    }
+    function closeChooser(){
+      chooser.style.display = 'none';
+      chooser.setAttribute('aria-hidden','true');
+      chooserBtns.innerHTML = '';
+    }
+    chooser.addEventListener('click', (e)=>{ if(e.target === chooser) closeChooser(); });
+    chooserCancel.addEventListener('click', closeChooser);
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeChooser(); });
+
+    // --- Render ---
+    function el(tag, attrs={}, children=[]){
+      const n=document.createElement(tag);
+      for(const [k,v] of Object.entries(attrs)){
+        if(k==='class') n.className=v;
+        else if(k.startsWith('on') && typeof v==='function') n.addEventListener(k.slice(2), v);
+        else if(v!=null) n.setAttribute(k,v);
+      }
+      [].concat(children).forEach(c=>n.append(typeof c==='string'?document.createTextNode(c):c));
+      return n;
+    }
+
+    function appCard(app){
+      const icon = el('div',{class:'ico','aria-hidden':'true'}, ICONS[app.icon] || '🧩');
+      const name = el('div',{class:'name'}, app.name);
+      const desc = el('div',{class:'desc'}, app.description || '');
+      const meta = el('div',{class:'meta'}, [name, desc]);
+
+      const isRoleChooser = Array.isArray(app.roles) && app.roles.length >= 2;
+      const linkAttrs = isRoleChooser ? { href:'#' } : {
+        href: app.url,
+        target: OPEN_IN_NEW_TAB ? '_blank' : undefined,
+        rel: OPEN_IN_NEW_TAB ? 'noopener noreferrer' : undefined
+      };
+
+      const a = el('a', {
+        class:'card',
+        ...linkAttrs,
+        'data-search':[app.name,app.description,app.category,(app.location||''),(app.tags||[]).join(' ')].join(' ').toLowerCase(),
+        onclick: (e)=>{
+          if(isRoleChooser){
+            e.preventDefault();
+            openChooser(app);
+          }
+        }
+      }, [icon, meta]);
+
+      const badge = el('div',{class:'badge'}, app.location ? app.location : (app.category || 'App'));
+      a.append(badge);
+
+      if(app.requiresLogin){
+        name.append(el('span',{class:'lock',title:'Login required','aria-label':'Login required'},'🔒'));
+      }
+      return a;
+    }
+
+    function sectionBlock(title, id, apps=[], categories=[]){
+      const head = el('div',{class:'section-head'}, [el('h2',{},title), el('div',{})]);
+      const chips = el('div',{class:'chips'});
+      const all = el('button',{class:'chip','aria-pressed':'true','data-filter':'all',onclick:toggleChip},'All');
+      chips.append(all);
+      categories.forEach(c=>chips.append(el('button',{class:'chip','aria-pressed':'false','data-filter':`cat:${c}`,onclick:toggleChip},c)));
+      const grid = el('div',{class:'grid'}, apps.map(appCard));
+      return el('section',{class:'section',id},[head,chips,grid]);
+    }
+
+    function toggleChip(e){
+      const wrap=e.currentTarget.closest('.chips');
+      wrap.querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed','false'));
+      e.currentTarget.setAttribute('aria-pressed','true');
+      filter();
+    }
+
+    function filter(){
+      const q = $('#searchInput').value.trim().toLowerCase();
+      const pressed = document.querySelector('.chips .chip[aria-pressed="true"]');
+      const f = pressed && pressed.getAttribute('data-filter')!=='all' ? pressed.getAttribute('data-filter') : null;
+      document.querySelectorAll('.card').forEach(card=>{
+        const t = (card.getAttribute('data-search')||'');
+        let okQ = !q || t.includes(q);
+        let okF = true;
+        if(f && f.startsWith('cat:')){
+          const cat = f.split(':')[1];
+          okF = t.includes(cat.toLowerCase());
+        }
+        card.classList.toggle('hidden', !(okQ && okF));
+      });
+    }
+
+    function render(data){
+      const main = $('#content'); main.innerHTML='';
+      // Universal
+      const uni = data.universal || [];
+      const catsU = [...new Set(uni.map(a=>a.category||'general'))];
+      main.appendChild(sectionBlock('Universal Apps','universal',uni,catsU));
+      // Locations
+      Object.keys(data.locations||{}).forEach(loc=>{
+        const apps = (data.locations[loc]||[]).map(x=>({ ...x, location: loc }));
+        const cats=[...new Set(apps.map(a=>a.category||'general'))];
+        main.appendChild(sectionBlock(loc,`loc-${loc}`,apps,cats));
+      });
+
+      $('#searchInput').addEventListener('input', filter);
+      document.addEventListener('keydown', e=>{ if(e.key==='/'){ e.preventDefault(); $('#searchInput').focus(); }});
+    }
+
+    (async function boot(){
+      try{
+        const res = await fetch(CONFIG_URL,{cache:'no-cache'});
+        const data = await res.json();
+        render(data);
+      }catch(e){
+        console.warn('apps.json missing; rendering empty shell.', e);
+        render({universal:[],locations:{}});
+      }finally{
+        $('#year').textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+</body>
+</html>
