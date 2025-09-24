@@ -24,10 +24,13 @@
       {
         "name": "Budget Tracker",
         "description": "Weekly KPIs & deliveries",
-        "url": "https://saltesefalcon.github.io/beaconbudgettracker/",
         "requiresLogin": true,
         "category": "analytics",
-        "icon": "analytics"
+        "icon": "analytics",
+        "roles": [
+          { "label": "Admin", "url": "https://saltesefalcon.github.io/beaconbudgettracker/" },
+          { "label": "Chef",  "url": "https://saltesefalcon.github.io/beaconbudgettracker/chef.html" }
+        ]
       },
       {
         "name": "Food Transfer Tracker",
@@ -50,10 +53,13 @@
       {
         "name": "Budget Tracker",
         "description": "Weekly KPIs & deliveries",
-        "url": "https://your-domain.github.io/budgettracker-prohibition",
         "requiresLogin": true,
         "category": "analytics",
-        "icon": "analytics"
+        "icon": "analytics",
+        "roles": [
+          { "label": "Admin", "url": "https://your-domain.github.io/prohibitionbudget/" },
+          { "label": "Chef",  "url": "https://your-domain.github.io/prohibitionbudget/chef.html" }
+        ]
       },
       {
         "name": "Food Transfer Tracker",
@@ -76,10 +82,13 @@
       {
         "name": "Budget Tracker",
         "description": "Weekly KPIs & deliveries",
-        "url": "https://your-domain.github.io/budgettracker-tulia",
         "requiresLogin": true,
         "category": "analytics",
-        "icon": "analytics"
+        "icon": "analytics",
+        "roles": [
+          { "label": "Admin", "url": "https://your-domain.github.io/tuliabudget/" },
+          { "label": "Chef",  "url": "https://your-domain.github.io/tuliabudget/chef.html" }
+        ]
       },
       {
         "name": "Food Transfer Tracker",
@@ -102,10 +111,13 @@
       {
         "name": "Budget Tracker",
         "description": "Weekly KPIs & deliveries",
-        "url": "https://your-domain.github.io/budgettracker-cesoir",
         "requiresLogin": true,
         "category": "analytics",
-        "icon": "analytics"
+        "icon": "analytics",
+        "roles": [
+          { "label": "Admin", "url": "https://your-domain.github.io/cesoirbudget/" },
+          { "label": "Chef",  "url": "https://your-domain.github.io/cesoirbudget/chef.html" }
+        ]
       },
       {
         "name": "Food Transfer Tracker",
