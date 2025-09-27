@@ -3,20 +3,26 @@
     {
       "name": "Keg Calculator",
       "description": "Quick volumes & yield calculator",
-      "url": "https://saltesefalcon.github.io/kegcalculator/",
+      "url": "https://your-domain.github.io/keg-calculator",
       "requiresLogin": false,
       "category": "calc",
-      "icon": "keg",
-      "tags": ["keg", "beer", "volume"]
+      "icon": "keg"
     },
     {
       "name": "Heist Tracker",
-      "description": "Heist wine inventory & adjustments",
-      "url": "https://saltesefalcon.github.io/heisttracker/",
+      "description": "Wine inventory & adjustments",
+      "url": "https://saltesefalcon.github.io/heisttrackermaster",
       "requiresLogin": true,
       "category": "inventory",
-      "icon": "inventory",
-      "tags": ["wine", "inventory"]
+      "icon": "inventory"
+    },
+    {
+      "name": "Prohibition Bakery Tracker",
+      "description": "Bakery transfers & tracking",
+      "url": "https://saltesefalcon.github.io/probakerytracker/index.html",
+      "requiresLogin": true,
+      "category": "inventory",
+      "icon": "inventory"
     }
   ],
   "locations": {
@@ -35,7 +41,7 @@
       {
         "name": "Food Transfer Tracker",
         "description": "Inter-store food transfers & invoices",
-        "url": "https://saltesefalcon.github.io/aidanfoodtracker/",
+        "url": "https://your-domain.github.io/food-transfer-beacon",
         "requiresLogin": true,
         "category": "transfer",
         "icon": "transfer"
@@ -57,14 +63,14 @@
         "category": "analytics",
         "icon": "analytics",
         "roles": [
-          { "label": "Admin", "url": "https://saltesefalcon.github.io/prohibitionbudgettracker/" },
-          { "label": "Chef",  "url": "https://saltesefalcon.github.io/prohibitionbudgettracker/chef.html" }
+          { "label": "Admin", "url": "https://your-domain.github.io/prohibitionbudget/" },
+          { "label": "Chef",  "url": "https://your-domain.github.io/prohibitionbudget/chef.html" }
         ]
       },
       {
         "name": "Food Transfer Tracker",
         "description": "Inter-store food transfers & invoices",
-        "url": "https://saltesefalcon.github.io/aidanfoodtracker/",
+        "url": "https://your-domain.github.io/food-transfer-prohibition",
         "requiresLogin": true,
         "category": "transfer",
         "icon": "transfer"
@@ -86,14 +92,14 @@
         "category": "analytics",
         "icon": "analytics",
         "roles": [
-          { "label": "Admin", "url": "https://saltesefalcon.github.io/tuliabudgettracker/" },
-          { "label": "Chef",  "url": "https://saltesefalcon.github.io/tuliabudgettracker/chef.html" }
+          { "label": "Admin", "url": "https://your-domain.github.io/tuliabudget/" },
+          { "label": "Chef",  "url": "https://your-domain.github.io/tuliabudget/chef.html" }
         ]
       },
       {
         "name": "Food Transfer Tracker",
         "description": "Inter-store food transfers & invoices",
-        "url": "https://saltesefalcon.github.io/aidanfoodtracker/",
+        "url": "https://your-domain.github.io/food-transfer-tulia",
         "requiresLogin": true,
         "category": "transfer",
         "icon": "transfer"
@@ -115,14 +121,14 @@
         "category": "analytics",
         "icon": "analytics",
         "roles": [
-          { "label": "Admin", "url": "https://saltesefalcon.github.io/cesoirbudgettracker/" },
-          { "label": "Chef",  "url": "https://saltesefalcon.github.io/cesoirbudgettracker/chef.html" }
+          { "label": "Admin", "url": "https://your-domain.github.io/cesoirbudget/" },
+          { "label": "Chef",  "url": "https://your-domain.github.io/cesoirbudget/chef.html" }
         ]
       },
       {
         "name": "Food Transfer Tracker",
         "description": "Inter-store food transfers & invoices",
-        "url": "https://saltesefalcon.github.io/aidanfoodtracker/",
+        "url": "https://your-domain.github.io/food-transfer-cesoir",
         "requiresLogin": true,
         "category": "transfer",
         "icon": "transfer"
@@ -138,4 +144,5 @@
     ]
   }
 }
+
 
