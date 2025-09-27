@@ -36,7 +36,7 @@
         "url": "https://your-domain.github.io/food-transfer-beacon",
         "requiresLogin": true,
         "category": "transfer",
-        "icon": "transfer"
+        "icon": "burger"
       }
     ],
     "Prohibition": [
@@ -57,7 +57,7 @@
         "url": "https://your-domain.github.io/food-transfer-prohibition",
         "requiresLogin": true,
         "category": "transfer",
-        "icon": "transfer"
+        "icon": "burger"
       }
       {
         "name": "Prohibition Bakery Tracker",
@@ -65,7 +65,7 @@
         "url": "https://saltesefalcon.github.io/probakerytracker/index.html",
         "requiresLogin": true,
         "category": "inventory",
-        "icon": "inventory"
+        "icon": "cupcake"
       }      
     ],
     "Tulia Osteria": [
@@ -86,7 +86,7 @@
         "url": "https://your-domain.github.io/food-transfer-tulia",
         "requiresLogin": true,
         "category": "transfer",
-        "icon": "transfer"
+        "icon": "burger"
       }
     ],
     "Ce Soir": [
@@ -107,7 +107,7 @@
         "url": "https://your-domain.github.io/food-transfer-cesoir",
         "requiresLogin": true,
         "category": "transfer",
-        "icon": "transfer"
+        "icon": "burger"
       }
     ]
   },
