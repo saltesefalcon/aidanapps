@@ -15,7 +15,7 @@
       "requiresLogin": true,
       "category": "inventory",
       "icon": "wine"
-    },
+    }
   ],
   "locations": {
     "Beacon": [
@@ -58,7 +58,7 @@
         "requiresLogin": true,
         "category": "transfer",
         "icon": "burger"
-      }
+      },
       {
         "name": "Prohibition Bakery Tracker",
         "description": "Bakery transfers & tracking",
@@ -66,7 +66,7 @@
         "requiresLogin": true,
         "category": "inventory",
         "icon": "cupcake"
-      }      
+      }
     ],
     "Tulia Osteria": [
       {
@@ -148,6 +148,7 @@
     ]
   }
 }
+
 
 
 
