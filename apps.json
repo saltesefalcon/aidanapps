@@ -3,7 +3,7 @@
     {
       "name": "Keg Calculator",
       "description": "Quick volumes & yield calculator",
-      "url": "https://your-domain.github.io/keg-calculator",
+      "url": "https://saltesefalcon.github.io/kegcalculator/",
       "requiresLogin": false,
       "category": "calc",
       "icon": "keg"
