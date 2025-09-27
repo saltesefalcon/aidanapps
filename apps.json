@@ -16,14 +16,6 @@
       "category": "inventory",
       "icon": "inventory"
     },
-    {
-      "name": "Prohibition Bakery Tracker",
-      "description": "Bakery transfers & tracking",
-      "url": "https://saltesefalcon.github.io/probakerytracker/index.html",
-      "requiresLogin": true,
-      "category": "inventory",
-      "icon": "inventory"
-    }
   ],
   "locations": {
     "Beacon": [
@@ -45,14 +37,6 @@
         "requiresLogin": true,
         "category": "transfer",
         "icon": "transfer"
-      },
-      {
-        "name": "Alcohol Transfer Tracker",
-        "description": "Beer/wine/spirit transfers",
-        "url": "https://your-domain.github.io/alcohol-transfer-beacon",
-        "requiresLogin": true,
-        "category": "bar",
-        "icon": "bar"
       }
     ],
     "Prohibition": [
@@ -74,15 +58,15 @@
         "requiresLogin": true,
         "category": "transfer",
         "icon": "transfer"
-      },
-      {
-        "name": "Alcohol Transfer Tracker",
-        "description": "Beer/wine/spirit transfers",
-        "url": "https://your-domain.github.io/alcohol-transfer-prohibition",
-        "requiresLogin": true,
-        "category": "bar",
-        "icon": "bar"
       }
+      {
+        "name": "Prohibition Bakery Tracker",
+        "description": "Bakery transfers & tracking",
+        "url": "https://saltesefalcon.github.io/probakerytracker/index.html",
+        "requiresLogin": true,
+        "category": "inventory",
+        "icon": "inventory"
+      }      
     ],
     "Tulia Osteria": [
       {
@@ -103,14 +87,6 @@
         "requiresLogin": true,
         "category": "transfer",
         "icon": "transfer"
-      },
-      {
-        "name": "Alcohol Transfer Tracker",
-        "description": "Beer/wine/spirit transfers",
-        "url": "https://your-domain.github.io/alcohol-transfer-tulia",
-        "requiresLogin": true,
-        "category": "bar",
-        "icon": "bar"
       }
     ],
     "Ce Soir": [
@@ -132,9 +108,37 @@
         "requiresLogin": true,
         "category": "transfer",
         "icon": "transfer"
+      }
+    ]
+  },
+  "hidden": {
+    "Alcohol Trackers": [
+      {
+        "name": "Alcohol Transfer Tracker (Beacon)",
+        "description": "Beer/wine/spirit transfers",
+        "url": "https://your-domain.github.io/alcohol-transfer-beacon",
+        "requiresLogin": true,
+        "category": "bar",
+        "icon": "bar"
       },
       {
-        "name": "Alcohol Transfer Tracker",
+        "name": "Alcohol Transfer Tracker (Prohibition)",
+        "description": "Beer/wine/spirit transfers",
+        "url": "https://your-domain.github.io/alcohol-transfer-prohibition",
+        "requiresLogin": true,
+        "category": "bar",
+        "icon": "bar"
+      },
+      {
+        "name": "Alcohol Transfer Tracker (Tulia)",
+        "description": "Beer/wine/spirit transfers",
+        "url": "https://your-domain.github.io/alcohol-transfer-tulia",
+        "requiresLogin": true,
+        "category": "bar",
+        "icon": "bar"
+      },
+      {
+        "name": "Alcohol Transfer Tracker (Ce Soir)",
         "description": "Beer/wine/spirit transfers",
         "url": "https://your-domain.github.io/alcohol-transfer-cesoir",
         "requiresLogin": true,
@@ -144,5 +148,6 @@
     ]
   }
 }
+
 
 
