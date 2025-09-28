@@ -11,7 +11,7 @@
     {
       "name": "Heist Tracker",
       "description": "Wine inventory & adjustments",
-      "url": "https://saltesefalcon.github.io/heisttrackermaster",
+      "url": "https://saltesefalcon.github.io/heisttracker/",
       "requiresLogin": true,
       "category": "inventory",
       "icon": "wine"
@@ -33,7 +33,7 @@
       {
         "name": "Food Transfer Tracker",
         "description": "Inter-store food transfers & invoices",
-        "url": "https://your-domain.github.io/food-transfer-beacon",
+        "url": "https://saltesefalcon.github.io/aidanfoodtracker/",
         "requiresLogin": true,
         "category": "transfer",
         "icon": "burger"
@@ -47,14 +47,14 @@
         "category": "analytics",
         "icon": "analytics",
         "roles": [
-          { "label": "Admin", "url": "https://your-domain.github.io/prohibitionbudget/" },
-          { "label": "Chef",  "url": "https://your-domain.github.io/prohibitionbudget/chef.html" }
+          { "label": "Admin", "url": "https://saltesefalcon.github.io/prohibitionbudgettracker/" },
+          { "label": "Chef",  "url": "https://saltesefalcon.github.io/prohibitionbudgettracker/chef.html" }
         ]
       },
       {
         "name": "Food Transfer Tracker",
         "description": "Inter-store food transfers & invoices",
-        "url": "https://your-domain.github.io/food-transfer-prohibition",
+        "url": "https://saltesefalcon.github.io/aidanfoodtracker/",
         "requiresLogin": true,
         "category": "transfer",
         "icon": "burger"
@@ -76,14 +76,14 @@
         "category": "analytics",
         "icon": "analytics",
         "roles": [
-          { "label": "Admin", "url": "https://your-domain.github.io/tuliabudget/" },
-          { "label": "Chef",  "url": "https://your-domain.github.io/tuliabudget/chef.html" }
+          { "label": "Admin", "url": "https://saltesefalcon.github.io/tuliabudgettracker/" },
+          { "label": "Chef",  "url": "https://saltesefalcon.github.io/tuliabudgettracker/chef.html" }
         ]
       },
       {
         "name": "Food Transfer Tracker",
         "description": "Inter-store food transfers & invoices",
-        "url": "https://your-domain.github.io/food-transfer-tulia",
+        "url": "https://saltesefalcon.github.io/aidanfoodtracker/",
         "requiresLogin": true,
         "category": "transfer",
         "icon": "burger"
@@ -97,14 +97,14 @@
         "category": "analytics",
         "icon": "analytics",
         "roles": [
-          { "label": "Admin", "url": "https://your-domain.github.io/cesoirbudget/" },
-          { "label": "Chef",  "url": "https://your-domain.github.io/cesoirbudget/chef.html" }
+          { "label": "Admin", "url": "https://saltesefalcon.github.io/cesoirbudgettracker/" },
+          { "label": "Chef",  "url": "https://saltesefalcon.github.io/cesoirbudgettracker/chef.html" }
         ]
       },
       {
         "name": "Food Transfer Tracker",
         "description": "Inter-store food transfers & invoices",
-        "url": "https://your-domain.github.io/food-transfer-cesoir",
+        "url": "https://saltesefalcon.github.io/aidanfoodtracker/",
         "requiresLogin": true,
         "category": "transfer",
         "icon": "burger"
