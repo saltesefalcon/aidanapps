@@ -7,7 +7,7 @@
       "requiresLogin": true,
       "category": "reporting",
       "icon": "team"
-    }
+    },
     {
       "name": "Keg Calculator",
       "description": "Quick volumes & yield calculator",
