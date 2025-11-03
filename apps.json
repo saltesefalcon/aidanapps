@@ -18,22 +18,22 @@
     }
   ],
   "locations": {
-     "Beacon": [
-                     {
+    "Beacon": [
+      {
         "name": "Beacon Petty Cash",
         "description": "Petty Cash Reporting Log",
         "url": "https://aidanpettycash.vercel.app/login",
         "requiresLogin": true,
         "category": "reporting",
-        "icon": "Money with Wings",
+        "icon": "money"
       },
-            {
-        "name": "Daily Manger Checklist",
+      {
+        "name": "Daily Manager Checklist",
         "description": "Opening-Mid-Closing Checklists",
         "url": "https://aidanmanagerchecklists.vercel.app/login",
         "requiresLogin": true,
         "category": "tasks",
-        "icon": "clipboard",
+        "icon": "clipboard"
       },
       {
         "name": "Budget Tracker",
@@ -56,21 +56,21 @@
       }
     ],
     "Prohibition": [
-                    {
+      {
         "name": "Prohibition Petty Cash",
         "description": "Petty Cash Reporting Log",
         "url": "https://aidanpettycash.vercel.app/login",
         "requiresLogin": true,
         "category": "reporting",
-        "icon": "Money with Wings",
+        "icon": "money"
       },
-        {
-        "name": "Daily Manger Checklist",
+      {
+        "name": "Daily Manager Checklist",
         "description": "Opening-Mid-Closing Checklists",
         "url": "https://aidanmanagerchecklists.vercel.app/login",
         "requiresLogin": true,
         "category": "tasks",
-        "icon": "clipboard",
+        "icon": "clipboard"
       },
       {
         "name": "Budget Tracker",
@@ -101,21 +101,21 @@
       }
     ],
     "Tulia Osteria": [
-                    {
+      {
         "name": "Tulia Petty Cash",
         "description": "Petty Cash Reporting Log",
         "url": "https://aidanpettycash.vercel.app/login",
         "requiresLogin": true,
         "category": "reporting",
-        "icon": "Money with Wings",
+        "icon": "money"
       },
-        {
-        "name": "Daily Manger Checklist",
+      {
+        "name": "Daily Manager Checklist",
         "description": "Opening-Mid-Closing Checklists",
         "url": "https://aidanmanagerchecklists.vercel.app/login",
         "requiresLogin": true,
         "category": "tasks",
-        "icon": "clipboard",
+        "icon": "clipboard"
       },
       {
         "name": "Budget Tracker",
@@ -138,21 +138,21 @@
       }
     ],
     "Ce Soir": [
-              {
+      {
         "name": "Ce Soir Petty Cash",
         "description": "Petty Cash Reporting Log",
         "url": "https://aidanpettycash.vercel.app/login",
         "requiresLogin": true,
         "category": "reporting",
-        "icon": "Money with Wings",
+        "icon": "money"
       },
-        {
-        "name": "Daily Manger Checklist",
+      {
+        "name": "Daily Manager Checklist",
         "description": "Opening-Mid-Closing Checklists",
         "url": "https://aidanmanagerchecklists.vercel.app/login",
         "requiresLogin": true,
         "category": "tasks",
-        "icon": "clipboard",
+        "icon": "clipboard"
       },
       {
         "name": "Budget Tracker",
@@ -212,7 +212,6 @@
     ]
   }
 }
-
 
 
 
