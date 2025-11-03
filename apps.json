@@ -18,7 +18,23 @@
     }
   ],
   "locations": {
-    "Beacon": [
+     "Beacon": [
+                     {
+        "name": "Beacon Petty Cash",
+        "description": "Petty Cash Reporting Log",
+        "url": "https://aidanpettycash.vercel.app/login",
+        "requiresLogin": true,
+        "category": "reporting",
+        "icon": "Money with Wings",
+      },
+            {
+        "name": "Daily Manger Checklist",
+        "description": "Opening-Mid-Closing Checklists",
+        "url": "https://aidanmanagerchecklists.vercel.app/login",
+        "requiresLogin": true,
+        "category": "tasks",
+        "icon": "clipboard",
+      },
       {
         "name": "Budget Tracker",
         "description": "Weekly KPIs & deliveries",
@@ -40,6 +56,22 @@
       }
     ],
     "Prohibition": [
+                    {
+        "name": "Prohibition Petty Cash",
+        "description": "Petty Cash Reporting Log",
+        "url": "https://aidanpettycash.vercel.app/login",
+        "requiresLogin": true,
+        "category": "reporting",
+        "icon": "Money with Wings",
+      },
+        {
+        "name": "Daily Manger Checklist",
+        "description": "Opening-Mid-Closing Checklists",
+        "url": "https://aidanmanagerchecklists.vercel.app/login",
+        "requiresLogin": true,
+        "category": "tasks",
+        "icon": "clipboard",
+      },
       {
         "name": "Budget Tracker",
         "description": "Weekly KPIs & deliveries",
@@ -69,6 +101,22 @@
       }
     ],
     "Tulia Osteria": [
+                    {
+        "name": "Tulia Petty Cash",
+        "description": "Petty Cash Reporting Log",
+        "url": "https://aidanpettycash.vercel.app/login",
+        "requiresLogin": true,
+        "category": "reporting",
+        "icon": "Money with Wings",
+      },
+        {
+        "name": "Daily Manger Checklist",
+        "description": "Opening-Mid-Closing Checklists",
+        "url": "https://aidanmanagerchecklists.vercel.app/login",
+        "requiresLogin": true,
+        "category": "tasks",
+        "icon": "clipboard",
+      },
       {
         "name": "Budget Tracker",
         "description": "Weekly KPIs & deliveries",
@@ -90,6 +138,22 @@
       }
     ],
     "Ce Soir": [
+              {
+        "name": "Ce Soir Petty Cash",
+        "description": "Petty Cash Reporting Log",
+        "url": "https://aidanpettycash.vercel.app/login",
+        "requiresLogin": true,
+        "category": "reporting",
+        "icon": "Money with Wings",
+      },
+        {
+        "name": "Daily Manger Checklist",
+        "description": "Opening-Mid-Closing Checklists",
+        "url": "https://aidanmanagerchecklists.vercel.app/login",
+        "requiresLogin": true,
+        "category": "tasks",
+        "icon": "clipboard",
+      },
       {
         "name": "Budget Tracker",
         "description": "Weekly KPIs & deliveries",
